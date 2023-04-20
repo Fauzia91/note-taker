@@ -16,8 +16,7 @@ A note taker created using express.js to write and save notes for day to day use
 
 ### Deployed
 
-Go to https://fauzia91.github.io/Password-Generator/
-
+Go to https://fauzia91.github.io/note-taker/
 
 ### Contributing
 
@@ -49,7 +48,7 @@ SOFTWARE.
 
 ### Github
 
-https://github.com/Fauzia91/Password-Generator 
+https://github.com/Fauzia91/note-taker
 
 ### Contact
 
