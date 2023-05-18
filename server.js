@@ -30,6 +30,7 @@ app.get('/notes', (req,res)=>{
 
 //api routes which is giving and receiving data
 //prefix with api
+
 app.get('/api/notes', (req,res)=>{  
 
 //read db.json
@@ -43,6 +44,39 @@ fs.readFile('./db/db.json', function (err, data) {
     
     
 })
+
+app.delete('/api/notes/:id', (req,res)=>{  
+/*
+    //read db.json
+    fs.readFile('./db/db.json', function (err, data) {
+        if (err){ throw err; }
+    
+        //convert to string to send
+        console.log("delete id", req.params.id)
+        const dataTemp = JSON.parse(data.toString());
+        let newDataTemp = [];
+        dataTemp.map((d,i)=>{
+            if(i === req.params.id) {
+                
+            } else {
+                newDataTemp.push(d)
+            }
+        })
+        console.log("data",data.toString());
+
+
+        fs.writeFile("./db/db.json",JSON.stringify(newDataTemp), function(){
+
+            console.log("i am done writing");
+            res.send("success")
+        })
+
+       
+        //res.send(data.toString())
+    });
+        */
+        
+    })
 
 //retrieving data
 app.post('/api/notes', (req,res)=>{  
