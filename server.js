@@ -3,7 +3,7 @@ const fs = require('fs'); //file reading library
 
 //express creating the app
 app = express();
-
+const port = process.env.PORT || 3001
 //helps read json //middleware
 app.use(express.json());
 
