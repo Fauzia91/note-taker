@@ -119,7 +119,7 @@ app.post('/api/notes', (req,res)=>{
 })
 
 //3000 is port
-app.listen(3000, function(){
+app.listen(port, function(){
     //this function gets called when server gets made
     console.log("Server started listening on port 3000")
 })
