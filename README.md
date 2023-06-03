@@ -4,14 +4,12 @@
 
 A note taker created using express.js to write and save notes for day to day use. 
 
-## Drive Link 
-
-https://drive.google.com/file/d/119UqA11LgYZmuvgCOEiOGSo7NbRxk-w8/view
 
 ### Table of Contents
 ***
 
 [Deployed](#deployed)
+[Heroku](#heroku)
 [Contributing](#contributing)
 [License](#license)
 [Github](#github)
@@ -20,6 +18,10 @@ https://drive.google.com/file/d/119UqA11LgYZmuvgCOEiOGSo7NbRxk-w8/view
 ### Deployed
 
 Go to https://fauzia91.github.io/note-taker/
+
+### Heroku
+
+https://dashboard.heroku.com/apps/note-taker1213
 
 ### Contributing
 
