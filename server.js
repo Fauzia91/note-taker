@@ -1,8 +1,8 @@
 const express = require("express"); //loading express library
 const fs = require('fs'); //file reading library
-
+const {v4: uuidv4} = require("uuid")
 //express creating the app
-app = express();
+const app = express();
 const port = process.env.PORT || 3001
 //helps read json //middleware
 app.use(express.json());
@@ -38,15 +38,15 @@ fs.readFile('./db/db.json', function (err, data) {
     if (err){ throw err; }
 
     //convert to string to send
-    console.log(data.toString());
-    res.send(data.toString())
+    const notes=JSON.parse(data)
+    res.json(notes)
 });
     
     
 })
 
 app.delete('/api/notes/:id', (req,res)=>{  
-/*
+
     //read db.json
     fs.readFile('./db/db.json', function (err, data) {
         if (err){ throw err; }
@@ -74,7 +74,7 @@ app.delete('/api/notes/:id', (req,res)=>{
        
         //res.send(data.toString())
     });
-        */
+        
         
     })
 
@@ -99,7 +99,8 @@ app.post('/api/notes', (req,res)=>{
         //add to the array
         targetJSON.push({
             title: req.body.title,
-            text: req.body.text
+            text: req.body.text,
+            id: uuidv4()
         })
 
 
@@ -121,5 +122,5 @@ app.post('/api/notes', (req,res)=>{
 //3000 is port
 app.listen(port, function(){
     //this function gets called when server gets made
-    console.log("Server started listening on port 3000")
+    console.log("Server started listening on port 3001")
 })
