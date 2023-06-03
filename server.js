@@ -53,16 +53,16 @@ app.delete('/api/notes/:id', (req,res)=>{
     
         //convert to string to send
         console.log("delete id", req.params.id)
-        const dataTemp = JSON.parse(data.toString());
+        const dataTemp = JSON.parse(data);
         let newDataTemp = [];
         dataTemp.map((d,i)=>{
-            if(i === req.params.id) {
+            if(d.id === req.params.id) {
                 
             } else {
                 newDataTemp.push(d)
             }
         })
-        console.log("data",data.toString());
+        //console.log("data",data.toString());
 
 
         fs.writeFile("./db/db.json",JSON.stringify(newDataTemp), function(){
